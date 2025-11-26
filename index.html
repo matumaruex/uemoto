@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マリンバ教室・講師プロフィール</title>
+    <style>
+        /* --- デザイン設定 (CSS) --- */
+        :root {
+            --main-color: #8D6E63; /* 木琴をイメージしたブラウン */
+            --accent-color: #FF7043; /* 目立つオレンジ（ボタン用） */
+            --bg-color: #F9F7F2; /* 優しい生成色 */
+            --text-color: #3E3E3E; /* 読みやすい濃いグレー */
+        }
+        body {
+            font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            text-align: center; /* 基本的に中央揃え */
+        }
+        /* --- 共通パーツ --- */
+        .container {
+            max-width: 600px; /* スマホで見やすい幅 */
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: var(--main-color);
+            border-bottom: 2px solid var(--main-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.4rem;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        /* ボタンのデザイン */
+        .btn-primary {
+            display: block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 50px; /* 丸みのあるボタン */
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            width: 80%; /* 幅広で押しやすく */
+            transition: opacity 0.3s;
+        }
+        .btn-primary:active {
+            opacity: 0.8;
+            transform: translateY(2px);
+        }
+        
+        /* --- セクションごとの設定 --- */
+        /* ヒーローセクション（トップ） */
+        .hero {
+            background-color: white;
+            padding: 40px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--main-color);
+        }
+        .hero-sub {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        /* 画像プレースホルダー */
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        /* プロフィール画像 */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        /* 料金表 */
+        .price-list {
+            list-style: none;
+            padding: 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .price-list li {
+            border-bottom: 1px solid #eee;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .price-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* フッター */
+        footer {
+            background-color: var(--main-color);
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <img src="https://placehold.co/600x400/8D6E63/white?text=Marimba+Image" alt="マリンバ演奏イメージ" class="main-image">
+        <h1>心に響く音色を、<br>あなたに。</h1>
+        <p class="hero-sub">初心者からプロ志向まで。<br>〇〇（地域名）のマリンバ教室</p>
+        <a href="#contact" class="btn-primary">体験レッスンに申し込む</a>
+    </section>
+
+    <div class="container">
+        
+        <section id="profile">
+            <h2>講師プロフィール</h2>
+            <img src="https://placehold.co/150x150/8D6E63/white?text=Face" alt="講師顔写真" class="profile-img">
+            <h3>お名前 太郎</h3>
+            <p style="text-align: left;">
+                ここに自己紹介文が入ります。これまでの演奏実績や、指導に対する想いを書きましょう。親しみやすさと信頼感を意識すると生徒さんが集まりやすくなります。<br><br>
+                ・〇〇音楽大学卒業<br>
+                ・〇〇コンクール入賞
+            </p>
+        </section>
+
+        <section id="lesson">
+            <h2>レッスン案内</h2>
+            <p>
+                初めての方でも安心。基礎から丁寧に指導します。<br>
+                まずは楽器に触れてみませんか？
+            </p>
+            
+            <ul class="price-list">
+                <li>
+                    <span>体験レッスン</span>
+                    <strong>1,000円 / 30分</strong>
+                </li>
+                <li>
+                    <span>入会金</span>
+                    <strong>5,000円</strong>
+                </li>
+                <li>
+                    <span>月謝（月2回）</span>
+                    <strong>8,000円〜</strong>
+                </li>
+                <li>
+                    <span>月謝（月4回）</span>
+                    <strong>15,000円〜</strong>
+                </li>
+            </ul>
+        </section>
+
+        <section id="access">
+            <h2>アクセス</h2>
+            <p>
+                <strong>〇〇マリンバ教室</strong><br>
+                〒000-0000<br>
+                〇〇県〇〇市〇〇町 1-2-3<br>
+                （〇〇駅から徒歩5分）
+            </p>
+            </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <p>体験レッスンのお申し込みやご質問は、<br>以下のボタンからお気軽にどうぞ。</p>
+            
+            <a href="https://line.me/..." class="btn-primary" style="background-color: #06C755;">LINEで問い合わせる</a>
+            
+            <a href="mailto:example@gmail.com" class="btn-primary" style="background-color: #555;">メールで送る</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Marimba Class Profile</p>
+    </footer>
+
+</body>
+</html>
 
